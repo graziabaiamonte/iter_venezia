@@ -147,8 +147,8 @@ export default function Page() {
 
         <div className="mt-12 grid sm:grid-cols-[1fr_auto] gap-6 items-end border-t border-ink/10 pt-8">
           <div>
-            <h3 className="display text-2xl text-ink">Dalla stazione di Mestre all&apos;hotel</h3>
-            <p className="text-ink/75 mt-1">Circa 800 metri, 10 minuti a piedi.</p>
+            <h3 className="display text-2xl text-ink">Dalla stazione di Mestre all&apos;hotel (con tappa supermercato)</h3>
+            <p className="text-ink/75 mt-1">Circa 2.5 km totali, 30-35 minuti a piedi.</p>
             <ol className="mt-5 space-y-2">
               {ARRIVAL.hotelWalk.map((d, i) => (
                 <li key={i} className="flex gap-3">
@@ -170,6 +170,34 @@ export default function Page() {
           </a>
         </div>
 
+        <div className="mt-10 bg-parchment/60 border border-ink/10 rounded-sm p-6 sm:p-8">
+          <div className="flex items-center justify-between flex-wrap gap-3">
+            <div>
+              <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-terracotta">
+                Tappa intermedia
+              </div>
+              <h3 className="display text-3xl mt-1 text-ink">{ARRIVAL.supermercato.name}</h3>
+            </div>
+            <a
+              href={ARRIVAL.supermercato.maps}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-teal font-medium link-grow"
+            >
+              <MapPinIcon className="w-4 h-4" /> Apri in Maps
+            </a>
+          </div>
+          <p className="mt-3 text-ink/80 leading-relaxed">{ARRIVAL.supermercato.note}</p>
+          <dl className="mt-5 space-y-3 text-[15px]">
+            <Row k="Orari" v={ARRIVAL.supermercato.hours} />
+            <Row k="Dalla stazione" v={ARRIVAL.supermercato.fromStation} />
+            <Row k="All'hotel" v={ARRIVAL.supermercato.toHotel} />
+          </dl>
+          <p className="mt-5 border-l-2 border-gold pl-4 italic text-ink/70 text-[15px]">
+            💡 {ARRIVAL.supermercato.tip}
+          </p>
+        </div>
+
         <p className="mt-10 border-l-2 border-gold pl-4 italic text-ink/70 max-w-2xl">
           ⏰ {ARRIVAL.timeline}
         </p>
@@ -185,6 +213,7 @@ export default function Page() {
       />
 
       <SectionShell>
+        <p className="text-ink/80 leading-relaxed max-w-2xl mb-12">{DAY1.intro}</p>
 
         {DAY1.sections.map((s, i) => (
           <TimelineBlock
@@ -193,19 +222,6 @@ export default function Page() {
             block={{ time: s.time, title: s.title, icon: s.icon, body: s.text }}
           />
         ))}
-
-        <div className="mt-4 bg-parchment/70 border border-ink/10 rounded-sm p-6 sm:p-8">
-          <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-terracotta">
-            {DAY1.walk.title}
-          </div>
-          <h3 className="display text-3xl sm:text-4xl mt-2 text-ink">Il centro di Mestre, a piedi</h3>
-          <p className="text-ink/75 mt-2">{DAY1.walk.intro}</p>
-          <div className="mt-8">
-            {DAY1.walk.stops.map((s, i) => (
-              <PlaceCard key={i} stop={s} index={i} />
-            ))}
-          </div>
-        </div>
 
         <p className="mt-12 display-italic text-2xl text-ink/70 text-center">{DAY1.closing}</p>
       </SectionShell>

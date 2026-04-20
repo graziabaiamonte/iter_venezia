@@ -92,14 +92,24 @@ export const ARRIVAL = {
   },
   hotelWalk: [
     "Esci dalla stazione di Mestre dal lato anteriore",
-    "Prendi Via Cappuccina / Via Piave verso est (segui Google Maps)",
-    "Attraversi Piazzale Cialdini e arrivi in zona Piazza Ferretto",
-    "Via Teatro Vecchio è una traversa laterale, molto vicina al centro pedonale",
+    "Imbocca Corso del Popolo verso nord (direzione centro)",
+    "Dopo 10 minuti arrivi al Pam (civico 209) — tappa supermercato",
+    "Prosegui su Corso del Popolo verso nord fino a Piazza Ferretto",
+    "Via Teatro Vecchio è una traversa laterale a fianco della piazza",
   ],
   hotelWalkMaps:
-    "https://www.google.com/maps/dir/?api=1&origin=Mestre+Stazione+FS&destination=Via+Teatro+Vecchio+5+Mestre&travelmode=walking",
+    "https://www.google.com/maps/dir/?api=1&origin=Mestre+Stazione+FS&destination=Via+Teatro+Vecchio+5+Mestre&travelmode=walking&waypoints=Corso+del+Popolo+209+Mestre",
+  supermercato: {
+    name: "Pam — Corso del Popolo 209",
+    note: "Non è un discount ma è il supermercato aperto fino a tardi più vicino al percorso stazione-hotel. Corso del Popolo è la direttrice naturale: ci passi davanti comunque.",
+    hours: "Lun-Sab 08:00-22:00 · Dom 08:30-20:00",
+    fromStation: "833 m · ~10 min a piedi da Mestre Stazione",
+    toHotel: "1.66 km · ~20 min a piedi fino all'hotel",
+    maps: "https://www.google.com/maps/search/?api=1&query=Pam+Corso+del+Popolo+209+Mestre",
+    tip: "Con solo zaino hai poco spazio: compra l'essenziale per la cena del 24 (qualcosa di pronto da scaldare o insalata/affettati) e acqua. Non fare la spesa per tre giorni.",
+  },
   timeline:
-    "Atterraggio 19:35 → fuori aeroporto 19:55 → bus ATVO 20:00 → Mestre 20:20 → hotel 20:50 → camera 21:15.",
+    "Atterraggio 19:35 → fuori aeroporto 19:55 → bus ATVO 20:00 → Mestre Stazione 20:20 → Pam 20:30 → spesa 15 min → hotel 21:15 → camera 21:30.",
 };
 
 // ─────────────── GIORNO 1 ───────────────
@@ -107,54 +117,24 @@ export const DAY1 = {
   id: "giorno-1",
   label: "24 Aprile",
   weekday: "Venerdì",
-  tag: "Arrivo · sera a Mestre",
+  tag: "Arrivo · riposo in hotel",
   intro:
-    "Dopo il check-in, serata libera. Cena con panini da casa e breve passeggiata nel centro di Mestre per prendere confidenza con la zona.",
+    "Arrivi stanca dal primo volo della tua vita. Nessuna passeggiata, nessun giro: la sera si riposa in hotel. La scoperta di Mestre è rimandata al 26.",
   sections: [
     {
       time: "21:30",
-      title: "Cena",
+      title: "Cena in camera",
       icon: "🥪",
-      text: "Panini portati da casa — in camera o su una panchina in Piazza Ferretto.",
+      text: "Panini portati da casa, mangiati con calma in camera. Se vuoi qualcosa di caldo, c'è un bar/panetteria sulla via tra la stazione e l'hotel.",
+    },
+    {
+      time: "22:30",
+      title: "A letto presto",
+      icon: "🌙",
+      text: "Domani sveglia alle 7:00 — giornata lunghissima a Venezia e Murano. Stanotte serve il riposo completo. Prepara lo zaino per domani: acqua, panini al sacco, powerbank, scarpe comode.",
     },
   ],
-  walk: {
-    title: "Passeggiata serale (1–1,5h) dall'hotel",
-    intro:
-      "Mestre non ha grandi monumenti ma il suo centro storico è grazioso, pedonale e sicuro.",
-    stops: [
-      {
-        title: "Piazza Ferretto",
-        desc: "Cuore pulsante di Mestre, pedonale, vivace la sera.",
-        maps: "https://www.google.com/maps/search/?api=1&query=Piazza+Ferretto+Mestre",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Piazza_ferretto_a_mestre.jpg/330px-Piazza_ferretto_a_mestre.jpg",
-      },
-      {
-        title: "Torre dell'Orologio",
-        desc: "Sul lato ovest della piazza, resto di un'antica porta medievale.",
-        maps: "https://www.google.com/maps/search/?api=1&query=Torre+dell%27Orologio+Mestre",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Mestre-Tour_de_l%27horloge.jpg/330px-Mestre-Tour_de_l%27horloge.jpg",
-      },
-      {
-        title: "Duomo di San Lorenzo",
-        desc: "Accanto alla piazza, esterno visibile sempre.",
-        maps: "https://www.google.com/maps/search/?api=1&query=Duomo+San+Lorenzo+Mestre",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Duomo_di_San_Lorenzo_-_Mestre.jpg/330px-Duomo_di_San_Lorenzo_-_Mestre.jpg",
-      },
-      {
-        title: "Via Palazzo · Galleria Matteotti",
-        desc: "Vie pedonali per una passeggiata tra vetrine.",
-        maps: "https://www.google.com/maps/search/?api=1&query=Via+Palazzo+Mestre",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/%28Mestre%29_Galleria_Matteotti_vista_della_Piazzetta_Gian_Francesco_Malipiero.jpg/330px-%28Mestre%29_Galleria_Matteotti_vista_della_Piazzetta_Gian_Francesco_Malipiero.jpg",
-      },
-      {
-        title: "Piazzetta Coin",
-        desc: "Piccola piazza con fontane moderne.",
-        maps: "https://www.google.com/maps/search/?api=1&query=Piazzetta+Coin+Mestre",
-      },
-    ],
-  },
-  closing: "A letto entro le 23:00 — domani sveglia presto. 🌙",
+  closing: "Buonanotte.",
 };
 
 // ─────────────── GIORNO 2 ───────────────
@@ -164,19 +144,35 @@ export const DAY2 = {
   weekday: "Sabato",
   tag: "Venezia + Murano",
   intro:
-    "Giornata tutta a piedi, a parte la traversata obbligatoria per Murano (non ci sono ponti). Mattina centro storico, primo pomeriggio Dorsoduro sud + pranzo alle Zattere, pomeriggio Murano, rientro a San Marco per il tramonto, poi cena e Mestre.",
+    "Giornata tutta a piedi, a parte la traversata obbligatoria per Murano (non ci sono ponti). Partenza con calma: sveglia alle 8:30, spesa al iN's Mercato, treno per Venezia alle 10. Mattina nel centro storico, primo pomeriggio Dorsoduro sud + pranzo alle Zattere, pomeriggio Murano, rientro a San Marco per il tramonto, cena e rientro a Mestre.",
   blocks: [
     {
-      time: "07:00",
+      time: "08:30",
       title: "Sveglia e colazione in hotel",
       icon: "☕",
-      body: "Mangia bene, il pranzo sarà al sacco. Prendi un frutto/brioche in più se possibile.",
+      body: "Colazione con calma. Esci dall'hotel intorno alle 9:15 per il iN's Mercato.",
     },
     {
-      time: "08:00",
+      time: "09:15 — 09:45",
+      title: "iN's Mercato — spesa per il pranzo",
+      icon: "🛒",
+      body: "Discount in Via Giosuè Carducci 54 — 470 metri dall'hotel, 7 minuti a piedi. È aperto dalle 8:00, quindi entri senza attese.",
+      bullets: [
+        "Orari: Lun-Sab 08:00-20:30 · Dom 09:00-20:00",
+        "Distanza hotel: ~470 m · 7 min a piedi",
+        "Distanza stazione Mestre: ~1.1 km · 15 min a piedi",
+        "Cosa comprare: panini, affettati/formaggio, frutta, snack, acqua/borraccia",
+        "💡 Prepara la lista sul telefono prima di partire — entri ed esci in 15 min",
+      ],
+      links: [
+        { label: "iN's Mercato · Maps", href: "https://www.google.com/maps/search/?api=1&query=iN%27s+Mercato+Via+Carducci+54+Mestre" },
+      ],
+    },
+    {
+      time: "10:00",
       title: "Treno Mestre → Venezia Santa Lucia",
       icon: "🚆",
-      body: "Consigliato rispetto al bus.",
+      body: "Dal iN's cammina verso la stazione (~15 min, 1.1 km). Prendi il primo regionale utile — passano ogni 5-10 minuti. Arrivo a Santa Lucia ~10:15.",
       bullets: [
         "Durata: 10–12 minuti",
         "Costo: €1,45 (regionale)",
@@ -189,7 +185,7 @@ export const DAY2 = {
       ],
     },
     {
-      time: "08:30 — 12:30",
+      time: "10:15 — 12:30",
       title: "Itinerario mattutino — tutto a piedi",
       icon: "🚶‍♀️",
       body: "Esci da Santa Lucia, subito vedi il Canal Grande. Percorso:",
@@ -264,8 +260,8 @@ export const DAY2 = {
       ],
     },
     {
-      time: "12:00 — 13:30",
-      title: "Dorsoduro sud —  pranzo sulle Zattere",
+      time: "12:30 — 14:00",
+      title: "Dorsoduro sud — pranzo sulle Zattere",
       icon: "🚶‍♀️",
       body: "Dal Ponte dei Sospiri ritorna in Piazza San Marco e prosegui verso ovest attraverso Campo San Moisè, Calle Larga XXII Marzo, Campo Santo Stefano fino al Ponte dell'Accademia. Attraversalo (a piedi, nessun vaporetto) e sei in Dorsoduro. Costeggi la punta meridionale e tocchi tre dei luoghi più poetici di Venezia prima di sederti a mangiare.",
       stops: [
@@ -299,7 +295,7 @@ export const DAY2 = {
       ],
     },
     {
-      time: "13:30 — 14:00",
+      time: "14:00 — 14:30",
       title: "A piedi fino a Fondamenta Nuove",
       icon: "🚶‍♀️",
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Fondamenta_Nuove%2C_Venezia_-_panoramio.jpg/330px-Fondamenta_Nuove%2C_Venezia_-_panoramio.jpg",
@@ -309,7 +305,7 @@ export const DAY2 = {
       ],
     },
     {
-      time: "14:00",
+      time: "14:30",
       title: "Vaporetto a Murano (unica tratta in barca)",
       icon: "⛴",
       body: "L'unico modo fisicamente possibile per raggiungere Murano — è un'isola.",
@@ -325,7 +321,7 @@ export const DAY2 = {
       ],
     },
     {
-      time: "14:00 — 17:00",
+      time: "14:45 — 17:15",
       title: "Murano",
       icon: "🔥",
       body: "Isola del vetro soffiato. Gratis, a meno di entrare nei musei.",
@@ -359,17 +355,16 @@ export const DAY2 = {
       ],
     },
     {
-      time: "17:00",
+      time: "17:30",
       title: "Rientro a Venezia (vaporetto)",
       icon: "↩",
       body: "Da Murano linea 4.1 o 4.2 verso Fondamenta Nuove (€9,50). Questa è la seconda e ultima tratta in barca della giornata.",
     },
     {
-      time: "17:30 — 19:30",
+      time: "17:45 — 19:45",
       title: "Tramonto a piedi fino a San Marco",
       icon: "🌅",
-      body: "Da Fondamenta Nuove cammina verso sud attraverso Cannaregio e Castello fino a Piazza San Marco (15–20 min). Le calli sono meno affollate nel pomeriggio, e la luce calda è un bonus. Arrivi in piazza giusto per il tramonto.",
-      
+      body: "Da Fondamenta Nuove cammina verso sud attraverso Cannaregio e Castello fino a Piazza San Marco (15–20 min). Le calli sono meno affollate nel pomeriggio, e la luce calda è un bonus. A fine aprile il sole tramonta intorno alle 20:00 — arrivi in piazza giusto per il tramonto vero.",
     },
     {
       time: "20:00",
@@ -419,7 +414,7 @@ export const DAY3 = {
       ],
     },
     {
-      time: "12:30 — 14:00",
+      time: "12:30 — 13:30",
       title: "Pranzo a Mestre centro",
       icon: "🍕",
       body: "Rientra in centro (bus 12 o a piedi). Opzioni economiche:",
@@ -427,6 +422,48 @@ export const DAY3 = {
         "Panino o focaccia in panetteria/bar intorno a Piazza Ferretto — €4-7",
         "Pizza al taglio in Via Palazzo — €5-8",
         "Trattoria tipo 'Menù lavoratori' — primo + bevanda €10-13",
+      ],
+    },
+    {
+      time: "13:30 — 14:30",
+      title: "Passeggiata nel centro di Mestre",
+      icon: "🚶‍♀️",
+      body: "Giro a piedi nel centro pedonale di Mestre, concentrato intorno a Piazza Ferretto. Non ci sono grandi monumenti ma è un centro grazioso, pedonale, sicuro — perfetto per una passeggiata digestiva prima del Forte Marghera.",
+      stops: [
+        {
+          title: "Piazza Ferretto",
+          desc: "Cuore pulsante di Mestre, pedonale, vivace.",
+          maps: "https://www.google.com/maps/search/?api=1&query=Piazza+Ferretto+Mestre",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Piazza_ferretto_a_mestre.jpg/330px-Piazza_ferretto_a_mestre.jpg",
+          free: true,
+        },
+        {
+          title: "Torre dell'Orologio",
+          desc: "Sul lato ovest della piazza, resto di un'antica porta medievale.",
+          maps: "https://www.google.com/maps/search/?api=1&query=Torre+dell%27Orologio+Mestre",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Mestre-Tour_de_l%27horloge.jpg/330px-Mestre-Tour_de_l%27horloge.jpg",
+          free: true,
+        },
+        {
+          title: "Duomo di San Lorenzo",
+          desc: "Accanto alla piazza, esterno visibile sempre.",
+          maps: "https://www.google.com/maps/search/?api=1&query=Duomo+San+Lorenzo+Mestre",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Duomo_di_San_Lorenzo_-_Mestre.jpg/330px-Duomo_di_San_Lorenzo_-_Mestre.jpg",
+          free: true,
+        },
+        {
+          title: "Via Palazzo · Galleria Matteotti",
+          desc: "Vie pedonali per una passeggiata tra vetrine.",
+          maps: "https://www.google.com/maps/search/?api=1&query=Via+Palazzo+Mestre",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/%28Mestre%29_Galleria_Matteotti_vista_della_Piazzetta_Gian_Francesco_Malipiero.jpg/330px-%28Mestre%29_Galleria_Matteotti_vista_della_Piazzetta_Gian_Francesco_Malipiero.jpg",
+          free: true,
+        },
+        {
+          title: "Piazzetta Coin",
+          desc: "Piccola piazza con fontane moderne, pochi passi dalla Galleria.",
+          maps: "https://www.google.com/maps/search/?api=1&query=Piazzetta+Coin+Mestre",
+          free: true,
+        },
       ],
     },
     {
