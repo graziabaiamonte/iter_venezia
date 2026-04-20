@@ -136,21 +136,12 @@ export default function Page() {
             <p className="text-sm text-ink/70 mt-1">{ARRIVAL.bus.line}</p>
             <dl className="mt-5 space-y-3 text-[15px]">
               <Row k="Durata" v={ARRIVAL.bus.duration} />
-              <Row k="Costo" v={ARRIVAL.bus.price} />
               <Row k="Frequenza" v={ARRIVAL.bus.frequency} />
               <Row k="Fermata" v={ARRIVAL.bus.stop} />
             </dl>
             <p className="mt-5 border-l-2 border-terracotta pl-4 text-ink/80 italic text-[15px]">
               {ARRIVAL.bus.buyOnline}
             </p>
-            <a
-              href={ARRIVAL.bus.url}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-terracotta font-medium link-grow"
-            >
-              <LinkIcon className="w-4 h-4" /> atvo.it
-            </a>
           </div>
         </div>
 
@@ -194,7 +185,6 @@ export default function Page() {
       />
 
       <SectionShell>
-        <p className="text-ink/80 leading-relaxed max-w-2xl mb-12">{DAY1.intro}</p>
 
         {DAY1.sections.map((s, i) => (
           <TimelineBlock
@@ -231,7 +221,7 @@ export default function Page() {
       />
 
       <SectionShell>
-        <p className="text-ink/80 leading-relaxed max-w-2xl mb-12">{DAY2.intro}</p>
+    
         <div>
           {DAY2.blocks.map((b, i) => (
             <TimelineBlock key={i} block={b} dotted={i < DAY2.blocks.length - 1} />
@@ -249,7 +239,6 @@ export default function Page() {
       />
 
       <SectionShell>
-        <p className="text-ink/80 leading-relaxed max-w-2xl mb-12">{DAY3.intro}</p>
         <div>
           {DAY3.blocks.map((b, i) => (
             <TimelineBlock key={i} block={b} dotted={i < DAY3.blocks.length - 1} />
@@ -292,10 +281,6 @@ export default function Page() {
           ))}
         </div>
 
-        <p className="mt-6 border-l-2 border-terracotta pl-4 italic text-ink/80">
-          ⚠ {RESTAURANTS.warning}
-        </p>
-        <p className="mt-4 text-sm text-ink/60 italic">{RESTAURANTS.menuNote}</p>
 
         <div className="mt-14">
           <h3 className="display text-2xl text-ink">A Mestre — di riserva</h3>
@@ -412,7 +397,11 @@ function DayCover({
           <div className="font-mono text-[11px] tracking-[0.3em] uppercase opacity-60">
             Giorno {label.split(" ")[0]} · {weekday}
           </div>
-          <div className={`display-italic text-3xl sm:text-5xl mt-2 ${isTeal ? "text-gold" : "text-terracotta"}`}>
+          <div
+            id={`${id}-heading`}
+            data-day-heading={id}
+            className={`display-italic text-3xl sm:text-5xl mt-2 ${isTeal ? "text-gold" : "text-terracotta"}`}
+          >
             {tag}
           </div>
         </div>

@@ -5,7 +5,7 @@
 
 export const TRIP = {
   title: "Venezia",
-  subtitle: "Tre giorni in laguna",
+  subtitle: "3 giorni",
   dates: "24 → 26 Aprile 2026",
   flyer: "Prima volta in aereo ✈",
 };
@@ -41,11 +41,7 @@ export const FLIGHTS = {
 export const AIRPORT_PMO_STEPS = [
   {
     title: "Tabellone 'Partenze'",
-    text: "Cerca il tuo volo Ryanair per Venezia usando il codice volo sulla carta d'imbarco. Segnati il numero del banco/desk solo se ti serve il drop-off bagagli — a te NON serve, hai solo zaino.",
-  },
-  {
-    title: "Drop-off bagagli: salta",
-    text: "Avendo solo zaino a mano, vai DIRETTAMENTE ai controlli di sicurezza.",
+    text: "Cerca il tuo volo Ryanair per Venezia usando il codice volo sulla carta d'imbarco.",
   },
   {
     title: "Controlli di sicurezza",
@@ -61,7 +57,7 @@ export const AIRPORT_PMO_STEPS = [
   },
   {
     title: "Al gate 30–45 min prima",
-    text: "L'imbarco chiude 20 minuti prima del decollo — chi arriva dopo NON viene fatto salire. Non sottovalutare i tempi se sei al bar.",
+    text: "L'imbarco chiude 20 minuti prima del decollo.",
   },
   {
     title: "All'imbarco",
@@ -69,7 +65,7 @@ export const AIRPORT_PMO_STEPS = [
   },
   {
     title: "Sull'aereo",
-    text: "Cerchi il tuo posto: il numero è la fila, la lettera è la colonna (es. 12C). Lo zaino va SOTTO il sedile davanti a te. Ti siedi, allacci la cintura, telefono in modalità aereo.",
+    text: "Cerchi il tuo posto. Lo zaino va SOTTO il sedile davanti a te. Ti siedi, allacci la cintura, telefono in modalità aereo.",
   },
 ];
 
@@ -95,7 +91,7 @@ export const ARRIVAL = {
     url: "https://www.atvo.it/",
   },
   hotelWalk: [
-    "Esci dalla stazione di Mestre dal lato anteriore (non binari)",
+    "Esci dalla stazione di Mestre dal lato anteriore",
     "Prendi Via Cappuccina / Via Piave verso est (segui Google Maps)",
     "Attraversi Piazzale Cialdini e arrivi in zona Piazza Ferretto",
     "Via Teatro Vecchio è una traversa laterale, molto vicina al centro pedonale",
@@ -119,7 +115,7 @@ export const DAY1 = {
       time: "21:30",
       title: "Cena",
       icon: "🥪",
-      text: "Panini portati da casa — in camera o su una panchina in Piazza Ferretto. Se vuoi qualcosa di caldo ed economico: gelaterie, panetterie e pasticcerie vicino all'hotel.",
+      text: "Panini portati da casa — in camera o su una panchina in Piazza Ferretto.",
     },
   ],
   walk: {
@@ -227,7 +223,7 @@ export const DAY2 = {
         },
         {
           title: "Ponte di Rialto",
-          desc: "Il ponte più famoso di Venezia — 1591. Foto e vista sul Canal Grande.",
+          desc: "Il ponte più famoso di Venezia.",
           maps: "https://www.google.com/maps/search/?api=1&query=Ponte+di+Rialto",
           free: true,
           image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Rialto_Bridge_at_night2.jpg/330px-Rialto_Bridge_at_night2.jpg",
@@ -246,14 +242,14 @@ export const DAY2 = {
         },
         {
           title: "Basilica di San Marco (interno)",
-          desc: "Ingresso gratuito ma fila 45–90 min. Per saltare la fila: prenotazione online €3. Interno stupefacente, mosaici d'oro.",
+          desc: "Ingresso gratuito ma fila 45–90 min. Per saltare la fila: prenotazione online €3.",
           official: "https://www.basilicasanmarco.it/",
           free: true,
           image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Venezia_Basilica_di_San_Marco_Fassade_2.jpg/330px-Venezia_Basilica_di_San_Marco_Fassade_2.jpg",
         },
         {
           title: "Palazzo Ducale — solo esterno",
-          desc: "Si vede stupendamente dal lato laguna. Interno €30 (fuori budget: salta).",
+          desc: "Si vede stupendamente dal lato laguna.",
           maps: "https://www.google.com/maps/search/?api=1&query=Palazzo+Ducale+Venezia",
           free: true,
           image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%28Venice%29_Doge%27s_Palace_facing_the_sea.jpg/330px-%28Venice%29_Doge%27s_Palace_facing_the_sea.jpg",
@@ -269,7 +265,7 @@ export const DAY2 = {
     },
     {
       time: "12:00 — 13:30",
-      title: "Dorsoduro sud — tutto a piedi + pranzo sulle Zattere",
+      title: "Dorsoduro sud —  pranzo sulle Zattere",
       icon: "🚶‍♀️",
       body: "Dal Ponte dei Sospiri ritorna in Piazza San Marco e prosegui verso ovest attraverso Campo San Moisè, Calle Larga XXII Marzo, Campo Santo Stefano fino al Ponte dell'Accademia. Attraversalo (a piedi, nessun vaporetto) e sei in Dorsoduro. Costeggi la punta meridionale e tocchi tre dei luoghi più poetici di Venezia prima di sederti a mangiare.",
       stops: [
@@ -306,7 +302,8 @@ export const DAY2 = {
       time: "13:30 — 14:00",
       title: "A piedi fino a Fondamenta Nuove",
       icon: "🚶‍♀️",
-      body: "Dalle Zattere risali verso nord attraverso Dorsoduro, Ponte dei Pugni, Campo Santa Margherita, San Polo, Campo dei Frari, Santa Croce, fino a Fondamenta Nuove (25–30 minuti a piedi attraverso calli caratteristiche). Lì prendi il vaporetto per Murano — unica eccezione ai piedi in questa giornata, Murano è un'isola separata.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Fondamenta_Nuove%2C_Venezia_-_panoramio.jpg/330px-Fondamenta_Nuove%2C_Venezia_-_panoramio.jpg",
+      body: "Dalle Zattere risali verso nord attraverso Dorsoduro fino a Fondamenta Nuove (25–30 minuti a piedi attraverso calli caratteristiche). Lì prendi il vaporetto per Murano.",
       links: [
         { label: "Fondamenta Nuove · Maps", href: "https://www.google.com/maps/search/?api=1&query=Fondamenta+Nove+Venezia" },
       ],
@@ -335,7 +332,7 @@ export const DAY2 = {
       stops: [
         {
           title: "Passeggiata lungo i canali",
-          desc: "Più tranquilla di Venezia, meno turisti, case colorate.",
+          desc: "Più tranquilla di Venezia, case colorate.",
           free: true,
           image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Murano_Aq1.jpg/330px-Murano_Aq1.jpg",
         },
@@ -358,12 +355,7 @@ export const DAY2 = {
           free: true,
           image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Faro_%28Murano%29.jpg/330px-Faro_%28Murano%29.jpg",
         },
-        {
-          title: "Museo del Vetro",
-          desc: "€10 intero — SALTATO per budget.",
-          official: "https://museovetro.visitmuve.it/",
-          paid: true,
-        },
+    
       ],
     },
     {
@@ -377,17 +369,7 @@ export const DAY2 = {
       title: "Tramonto a piedi fino a San Marco",
       icon: "🌅",
       body: "Da Fondamenta Nuove cammina verso sud attraverso Cannaregio e Castello fino a Piazza San Marco (15–20 min). Le calli sono meno affollate nel pomeriggio, e la luce calda è un bonus. Arrivi in piazza giusto per il tramonto.",
-      pairs: [
-        {
-          title: "Sestiere di Castello (camminata)",
-          desc: "Tragitto Fondamenta Nuove → San Marco attraverso la zona più autentica e meno turistica di Venezia. Campo Santa Maria Formosa, Campi dei Santi Giovanni e Paolo.",
-        },
-        {
-          title: "Piazza San Marco al tramonto",
-          desc: "La basilica si tinge d'oro, il campanile diventa silhouette, le Procuratie si accendono di luce calda. Salute e Dogana sono già alle tue spalle: oggi li hai visti di giorno, ora vedi il centro di notte.",
-          maps: "https://www.google.com/maps/search/?api=1&query=Piazza+San+Marco+Venezia",
-        },
-      ],
+      
     },
     {
       time: "20:00",
@@ -430,11 +412,10 @@ export const DAY3 = {
         "A piedi: 25–30 min dall'hotel via Viale San Marco",
         "Percorsi pedonali e ciclabili",
         "Area lagunare con vista su Venezia — punti fotografici spettacolari",
-        "⚠ Porta acqua e snack: in loco pochi chioschi, non sempre aperti",
       ],
       links: [
         { label: "Parco San Giuliano · Maps", href: "https://www.google.com/maps/search/?api=1&query=Parco+San+Giuliano+Mestre" },
-        { label: "Info ufficiali", href: "https://www.comune.venezia.it/it/content/parco-san-giuliano" },
+     
       ],
     },
     {
@@ -459,7 +440,6 @@ export const DAY3 = {
         "Camminata sulle mura e sul fossato",
         "Area verde con caselli e depositi storici",
         "Installazioni artistiche temporanee",
-        "Bar/bistrot se vuoi un caffè",
       ],
       links: [
         { label: "Forte Marghera · sito", href: "https://www.fortemarghera.it/" },
@@ -476,7 +456,7 @@ export const DAY3 = {
       time: "17:00",
       title: "Bus ATVO per l'aeroporto",
       icon: "🚌",
-      body: "Dalla stazione di Mestre: bus ATVO Express per Marco Polo, €10 (o €18 A/R se non hai già usato il ritorno). Durata 20 minuti. Arrivo aeroporto 17:25.",
+      body: "Dalla stazione di Mestre: bus ATVO Express per Marco Polo (biglietto su whatsapp). Durata 20 minuti. Arrivo aeroporto 17:25.",
     },
     {
       time: "17:30 — 20:00",
@@ -487,7 +467,6 @@ export const DAY3 = {
         "Check-in già fatto online (ricorda di farlo il 25 sera)",
         "Vai direttamente ai controlli sicurezza",
         "Controlla i tabelloni per il gate di partenza",
-        "Cena leggera o spuntino (caro: €8-12 un panino, porta qualcosa da casa se possibile)",
         "Al gate 40-45 min prima del volo",
         "Imbarco ~19:30, volo 20:00, atterraggio Palermo ~21:35",
       ],
@@ -531,10 +510,8 @@ export const RESTAURANTS = {
       maps: "https://www.google.com/maps/search/?api=1&query=Al+Giardinetto+Severino+Venezia",
     },
   ],
-  warning:
-    "EVITA i ristoranti con menu turistici esposti in più lingue in Piazza San Marco o sul Canal Grande: prezzi gonfiati e coperti salati.",
-  menuNote:
-    "Alcuni ristoranti veneziani non aggiornano i menu online. Se un link non funziona, controlla le foto caricate dai clienti su Google Maps o chiama il ristorante.",
+
+
   mestre: [
     {
       name: "Pizzeria Al Vapore",

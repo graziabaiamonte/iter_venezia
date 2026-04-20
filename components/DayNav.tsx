@@ -13,16 +13,24 @@ export default function DayNav() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const THRESHOLD = 120; // px dal top del viewport — soglia in cui l'intestazione si considera "letta"
     const onScroll = () => {
       setScrolled(window.scrollY > 200);
-      const positions = DAYS.map((d) => {
-        const el = document.getElementById(d.id);
-        if (!el) return { id: d.id, top: Infinity };
-        const r = el.getBoundingClientRect();
-        return { id: d.id, top: Math.abs(r.top - 120) };
-      });
-      const nearest = positions.sort((a, b) => a.top - b.top)[0];
-      if (nearest) setActive(nearest.id);
+      // Attiva l'ultima intestazione che è scesa sotto la soglia.
+      // Misuriamo l'elemento con id `${giorno}-heading` (il testo "Mestre · rientro"),
+      // non la sezione DayCover intera (che include il grande numero "26").
+      let current = DAYS[0].id;
+      for (const d of DAYS) {
+        const heading = document.getElementById(`${d.id}-heading`);
+        if (!heading) continue;
+        const top = heading.getBoundingClientRect().top;
+        if (top <= THRESHOLD) {
+          current = d.id;
+        } else {
+          break;
+        }
+      }
+      setActive(current);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
